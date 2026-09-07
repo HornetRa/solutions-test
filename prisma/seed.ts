@@ -1,7 +1,8 @@
 import { PrismaClient } from '@prisma/client';
 import { fileURLToPath } from 'node:url';
+import { PROFILE_SLUG } from '../src/profile/constants.js';
 
-export const PROFILE_SLUG = 'aleksei-rybkin';
+export { PROFILE_SLUG };
 
 export async function seed(prisma: PrismaClient) {
   const profile = await prisma.profile.upsert({
