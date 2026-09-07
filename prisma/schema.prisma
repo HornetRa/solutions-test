@@ -26,6 +26,8 @@ model Link {
   order     Int     @default(0)
   profileId Int
   profile   Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@index([profileId, order])
 }
 
 model Skill {
@@ -35,6 +37,8 @@ model Skill {
   order     Int     @default(0)
   profileId Int
   profile   Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@index([profileId, order])
 }
 
 model Experience {
@@ -46,6 +50,8 @@ model Experience {
   order        Int      @default(0)
   profileId    Int
   profile      Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@index([profileId, order])
 }
 
 model Project {
@@ -56,4 +62,6 @@ model Project {
   order       Int     @default(0)
   profileId   Int
   profile     Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@index([profileId, order])
 }
