@@ -21,6 +21,7 @@ import { ProfileModule } from './profile/profile.module.js';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       sortSchema: true,
       playground: false,
+      introspection: true,
       plugins: [ApolloServerPluginLandingPageLocalDefault({ embed: true })],
     }),
     ProfileModule,
